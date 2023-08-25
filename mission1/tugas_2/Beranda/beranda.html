@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <style>
+    a,
+    button,
+    input,
+    select,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      appearance: none;
+      background: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main-frame">
+    <!-- This part is used for reloading the page when we click the logo-->
+    <a href="#" onclick="reloadPage(event)" class="logo-link"><img class="logo" src="logo.png" /></a>
+    <script>
+      const reloadPage = (event) => {
+        event.preventDefault();
+        location.reload();
+      }
+    </script>
+
+    <div class="tool-kit"></div>
+    <div class="view-all-lesson"></div>
+    <a href="../Maintenance/maintenance.html">
+      <div class="view-all-lesson2">View All Lesson</div>
+    </a>
+    <a href="../Maintenance/maintenance.html">
+      <div class="toolkit">Toolkit</div>
+    </a>
+    <div class="an-easy-to-follow-design-course-for-people-who-do-amazing-things">
+      <span><span class="an-easy-to-follow-design-course-for-people-who-do-amazing-things-span">An </span><span
+          class="an-easy-to-follow-design-course-for-people-who-do-amazing-things-span2">easy to follow design
+          course<br /></span><span class="an-easy-to-follow-design-course-for-people-who-do-amazing-things-span3">for
+          people who do amazing things.</span></span>
+    </div>
+    <div
+      class="receive-a-design-lesson-in-your-inbox-each-week-hand-crafted-by-a-design-pro-learn-at-your-own-pace-and-apply-it-to-your-real-life-work">
+      Receive a design lesson in your inbox each week, hand crafted by a
+      design pro.<br />Learn at your own pace, and apply it to your real life
+      work.
+    </div>
+
+    <!-- This part is used for submitting the email-->
+    <form id="form">
+      <input type="email" class="insert-box" id="email" name="email" placeholder="Enter your email">
+      <button type="submit" class="submit-box">Get started</button>
+    </form>
+
+    <!-- This is the JavaScript code to handle the submit event and show the pop up notification -->
+    <script>
+      // Get the form element by its id
+      const form = document.getElementById("form");
+
+      // Create a function to create a pop up element with a message
+      function createPopUp(message) {
+        // Create a div element for the pop up container
+        const popUp = document.createElement("div");
+        // Add the pop-up class to the pop up element
+        popUp.classList.add("pop-up");
+
+        // Create a div element for the pop up content
+        const popUpContent = document.createElement("div");
+        // Add the pop-up-content class to the pop up content element
+        popUpContent.classList.add("pop-up-content");
+
+        // Create a span element for the pop up message
+        const popUpMessage = document.createElement("span");
+        // Add the pop-up-message class to the pop up message element
+        popUpMessage.classList.add("pop-up-message");
+        // Set the text content of the pop up message element to the message parameter
+        popUpMessage.textContent = message;
+
+        // Create a div element for the pop up close button
+        const popUpClose = document.createElement("div");
+        // Add the pop-up-close class to the pop up close element
+        popUpClose.classList.add("pop-up-close");
+
+        // Append the pop up message and the pop up close elements to the pop up content element
+        popUpContent.appendChild(popUpMessage);
+        popUpContent.appendChild(popUpClose);
+
+        // Append the pop up content element to the pop up element
+        popUp.appendChild(popUpContent);
+
+        // Return the pop up element
+        return popUp;
+      }
+
+      // Create a function to remove a pop up element
+      function removePopUp(popUp) {
+        // Remove the event listener from the pop up close element
+        popUp.querySelector(".pop-up-close").removeEventListener("click", closePopUp);
+
+        // Remove the event listener from the window object
+        window.removeEventListener("click", closePopUp);
+
+        // Remove the pop up element from the document body
+        document.body.removeChild(popUp);
+      }
+
+      // Create a function to handle the click event on the pop up close element or outside the pop up element
+      function closePopUp(event) {
+        // Get the current target of the event, which is either the window object or the pop up close element
+        const target = event.currentTarget;
+
+        // Get the current pop up element by its class name
+        const currentPopUp = document.querySelector(".pop-up");
+
+        // If the target is the window object, check if the event target (the element that triggered the event) is not inside the current pop up element
+        if (target === window && !currentPopUp.contains(event.target)) {
+          // If so, remove the current pop up element
+          removePopUp(currentPopUp);
+
+          return;
+
+        }
+
+        // If the target is not the window object, it must be the pop up close element, so remove the current pop up element as well
+        removePopUp(currentPopUp);
+
+      }
+
+      // Create a function to handle the submit event on the form element
+      function submitForm(event) {
+        // Prevent the default behavior of submitting the form, which would reload the page
+        event.preventDefault();
+
+        // Get the email input element by its id
+        const emailInput = document.getElementById("email");
+
+        // Get the value of the email input element, which is what the user typed in
+        const emailValue = emailInput.value;
+
+        // Check if the email value is not empty and is a valid email address using a regular expression (you can use any other validation method you prefer)
+        if (emailValue && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
+          // If so, create a new pop up element with a success message using your email value
+          const newPopUp = createPopUp(`You have successfully subscribed!`);
+
+          // Append the new pop up element to the document body
+          document.body.appendChild(newPopUp);
+
+          // Add an event listener to handle click events on both window object and newPopUp's close button.
+          window.addEventListener("click", closePopUp);
+          newPopUp.querySelector(".pop-up-close").addEventListener("click", closePopUp);
+
+        } else {
+          // If not, create a new pop up element with an error message
+          const newPopUp = createPopUp(`Please enter a valid email address.`);
+
+          // Append it to document body and add event listeners as before
+          document.body.appendChild(newPopUp);
+          window.addEventListener("click", closePopUp);
+          newPopUp.querySelector(".pop-up-close").addEventListener("click", closePopUp);
+        }
+      }
+
+      // Add an event listener to handle submit events on the form element
+      form.addEventListener("submit", submitForm);
+    </script>
+
+    <div class="pencil-ruler-svgrepo-com zoom">
+      <div class="group">
+        <div class="group2">
+          <svg class="group3" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 0.875H0.333344L7.66668 15.375L15 0.875Z" fill="#8F8F8F" />
+          </svg>
+
+          <svg class="group4" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.6667 22C10.2 22 9.10001 21.275 8.36668 19.825L1.03335 5.325C0.300012 4.2375 0.666678 2.7875 1.03335 1.7C1.76668 0.974999 3.23335 0.25 4.33335 0.25H19C20.1 0.25 21.5667 0.975 22.3 2.0625C23.0333 3.15 23.0333 4.6 22.3 5.6875L14.9667 20.1875C14.2333 21.275 13.1333 22 11.6667 22ZM10.2 7.5L11.6667 10.4L13.1333 7.5H10.2Z"
+              fill="#8F8F8F" />
+          </svg>
+        </div>
+        <div class="group5">
+          <svg class="group6" width="23" height="73" viewBox="0 0 23 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19 72.5H4.33335C2.13335 72.5 0.666687 71.05 0.666687 68.875V10.875C0.666687 5.075 5.43335 0 11.6667 0C17.9 0 22.6667 4.7125 22.6667 10.875V68.875C22.6667 71.05 21.2 72.5 19 72.5ZM8.00002 65.25H15.3334V10.875C15.3334 9.0625 13.8667 7.25 11.6667 7.25C9.46669 7.25 8.00002 8.7 8.00002 10.875V65.25Z"
+              fill="#8F8F8F" />
+          </svg>
+        </div>
+        <div class="group7">
+          <svg class="group8" width="30" height="87" viewBox="0 0 30 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M25.6667 87H3.66667C1.46667 87 0 85.55 0 83.375V3.625C0 1.45 1.46667 0 3.66667 0H25.6667C27.8667 0 29.3333 1.45 29.3333 3.625V83.375C29.3333 85.55 27.8667 87 25.6667 87ZM7.33333 79.75H22V7.25H7.33333V79.75Z"
+              fill="#8F8F8F" />
+          </svg>
+        </div>
+        <div class="group9">
+          <svg class="group10" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.6667 7.375H4.33335C2.13335 7.375 0.666687 5.925 0.666687 3.75C0.666687 1.575 2.13335 0.125 4.33335 0.125H11.6667C13.8667 0.125 15.3334 1.575 15.3334 3.75C15.3334 5.925 13.8667 7.375 11.6667 7.375Z"
+              fill="#8F8F8F" />
+          </svg>
+        </div>
+        <div class="group9">
+          <svg class="group11" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.6667 7.875H4.33335C2.13335 7.875 0.666687 6.425 0.666687 4.25C0.666687 2.075 2.13335 0.625 4.33335 0.625H11.6667C13.8667 0.625 15.3334 2.075 15.3334 4.25C15.3334 6.425 13.8667 7.875 11.6667 7.875Z"
+              fill="#8F8F8F" />
+          </svg>
+        </div>
+        <div class="group9">
+          <svg class="group12" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.6667 7.375H4.33335C2.13335 7.375 0.666687 5.925 0.666687 3.75C0.666687 1.575 2.13335 0.125 4.33335 0.125H11.6667C13.8667 0.125 15.3334 1.575 15.3334 3.75C15.3334 5.925 13.8667 7.375 11.6667 7.375Z"
+              fill="#8F8F8F" />
+          </svg>
+        </div>
+        <div class="group9">
+          <svg class="group13" width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.6667 7.875H4.33335C2.13335 7.875 0.666687 6.425 0.666687 4.25C0.666687 2.075 2.13335 0.625 4.33335 0.625H11.6667C13.8667 0.625 15.3334 2.075 15.3334 4.25C15.3334 6.425 13.8667 7.875 11.6667 7.875Z"
+              fill="#8F8F8F" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <svg class="controller-svgrepo-com zoom" width="98" height="90" viewBox="0 0 98 90" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M60.025 45C56.642 45 53.9 42.4816 53.9 39.375C53.9 36.2684 56.642 33.75 60.025 33.75C63.408 33.75 66.15 36.2684 66.15 39.375C66.15 42.4816 63.408 45 60.025 45Z"
+        fill="#8F8F8F" />
+      <path
+        d="M69.825 56.25C66.442 56.25 63.7 53.7318 63.7 50.625C63.7 47.5182 66.442 45 69.825 45C73.208 45 75.95 47.5182 75.95 50.625C75.95 53.7318 73.208 56.25 69.825 56.25Z"
+        fill="#8F8F8F" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M71.05 18H26.95C13.419 18 2.45 28.0736 2.45 40.5V49.5C2.45 61.9263 13.419 72 26.95 72H71.05C84.5809 72 95.55 61.9263 95.55 49.5V40.5C95.55 28.0736 84.5809 18 71.05 18ZM12.25 40.5C12.25 33.0442 18.8314 27 26.95 27H71.05C79.1688 27 85.75 33.0442 85.75 40.5V49.5C85.75 56.9561 79.1688 63 71.05 63H26.95C18.8314 63 12.25 56.9561 12.25 49.5V40.5Z"
+        fill="#8F8F8F" />
+      <path
+        d="M19.6 49.5C16.8938 49.5 14.7 47.4853 14.7 45C14.7 42.5147 16.8938 40.5 19.6 40.5H39.2C41.9062 40.5 44.1 42.5147 44.1 45C44.1 47.4853 41.9062 49.5 39.2 49.5H19.6Z"
+        fill="#8F8F8F" />
+      <path
+        d="M34.3 54C34.3 56.4853 32.1062 58.5 29.4 58.5C26.6938 58.5 24.5 56.4853 24.5 54V36C24.5 33.5147 26.6938 31.5 29.4 31.5C32.1062 31.5 34.3 33.5147 34.3 36V54Z"
+        fill="#8F8F8F" />
+    </svg>
+
+    <div class="microscope-svgrepo-com zoom">
+      <div class="group">
+        <svg class="group14" width="73" height="14" viewBox="0 0 73 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.157532 0.481369V8.24002H4.74272V14H9.79241V8.24002H63.2074V14H68.2571V8.24002H72.8425V0.481369H0.157532Z"
+            fill="#8F8F8F" />
+        </svg>
+      </div>
+      <div class="group">
+        <svg class="group15" width="20" height="44" viewBox="0 0 20 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.439026 0.554077V5.75338C1.24885 5.55266 2.09404 5.44382 2.96396 5.44382C8.81568 5.44382 13.5765 10.2605 13.5765 16.1812C13.5765 22.1016 8.81584 26.9185 2.96396 26.9185C2.09387 26.9185 1.24885 26.8096 0.439026 26.6089V36.5768H3.35293V43.9836H16.566V36.5768H19.4799V0.554077H0.439026Z"
+            fill="#8F8F8F" />
+        </svg>
+      </div>
+      <div class="group">
+        <svg class="group16" width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.566 0H3.35294H0.0653381V5.10911H3.35294V10.445H16.566V5.10911H19.8534V0H16.566Z"
+            fill="#8F8F8F" />
+        </svg>
+      </div>
+      <div class="group">
+        <svg class="group17" width="31" height="43" viewBox="0 0 31 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M25.3514 6.18121C25.3514 3.91263 26.0524 1.80747 27.2438 0.0718536C20.2868 2.44206 13.9596 7.64808 9.2104 14.9779C4.24836 22.6366 1.23468 32.2626 0.592529 42.3723H15.5965C16.2551 34.5511 18.7819 27.202 22.7168 21.8329C24.0698 19.9869 26.6671 16.9589 30.1885 15.1823C27.2799 13.2651 25.3514 9.94774 25.3514 6.18121Z"
+            fill="#8F8F8F" />
+        </svg>
+      </div>
+      <div class="group">
+        <svg class="group18" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.96416 0.552917C2.89685 0.552917 0.401306 3.07765 0.401306 6.18121C0.401306 9.28444 2.89669 11.8093 5.96416 11.8093C9.03146 11.8093 11.527 9.2846 11.527 6.18121C11.5268 3.07765 9.03146 0.552917 5.96416 0.552917Z"
+            fill="#8F8F8F" />
+        </svg>
+      </div>
+    </div>
+    <div class="curated-resources">Curated Resources</div>
+    <div class="interactive-content">Interactive Content</div>
+    <div class="awesome-design-tools">Awesome Design Tools</div>
+    <div
+      class="don-t-know-where-to-start-we-ve-enlisted-the-world-s-top-designers-to-craft-lessons-for-learning-the-tools-techniques-terminology-of-good-design">
+      Don&#039;t know where to start? We’ve enlisted the<br />world’s top designers to craft lessons for<br />learning
+      the tools, techniques &amp; terminology<br />of good design.
+    </div>
+    <div
+      class="learn-by-doing-play-with-design-puzzles-and-challenging-games-as-you-learn-test-your-skills-and-explore-possibilities">
+      Learn by doing. Play with design puzzles and<br />challenging games as you learn. Test your<br />skills and
+      explore possibilities.
+    </div>
+    <div
+      class="we-ve-curated-a-list-of-the-best-design-tools-to-help-you-figure-out-which-ones-to-learn-and-discover-new-and-helpful-tools-you-may-have-never-heard-of">
+      We’ve curated a list of the best design tools to<br />help you figure out which ones to learn, and<br />discover
+      new and helpful tools you may have<br />never heard of.
+    </div>
+    <div class="page-extension"></div>
+    <div
+      class="i-m-a-designer-with-a-love-for-creating-products-that-are-meaningful-simple-and-easy-to-use-i-co-founded-and-am-currently-building-liberio-a-web-app-for-simple-e-book-creation-and-publishing-in-my-spare-time-i-write-and-speak-i-ove-talking-shop-on-twitter-so-let-s-chat">
+      I&#039;m a designer with a love for creating products that are<br />meaningful, simple and easy to use. I
+      co-founded and am<br />currently building Liberio, a web app for simple eBook<br />creation and publishing. In my
+      spare time, I write and speak. I <br />love talking shop on twitter, so let&#039;s chat!
+    </div>
+    <div
+      class="i-m-a-designer-of-digital-products-in-my-late-20-s-who-is-little-too-into-simplicity-and-pixel-perfection-i-studied-interactive-visual-imaging-and-photography-in-missouri-and-somehow-ended-up-in-foggy-san-francisco-designing-things-with-unbelievably-talented-teams-such-as-fitbit-pinterest-zendesk-and-one-kings-lane">
+      I&#039;m a designer of digital products in my late 20’s who is little<br />too into simplicity and
+      pixel-perfection. I studied interactive<br />visual imaging and photography in Missouri, and somehow<br />ended up
+      in foggy San Francisco designing things with<br />unbelievably talented teams such as Fitbit,
+      Pinterest,<br />Zendesk, and One Kings Lane.
+    </div>
+    <div
+      class="i-write-for-tech-crunch-forbes-psychology-today-and-am-a-frequent-speaker-at-industry-conferences-and-fortune-500-companies-i-have-lectured-at-the-stanford-graduate-school-of-business-and-design-school-and-have-sold-two-technology-companies-since-2003">
+      I write for TechCrunch, Forbes, Psychology Today, and am a<br />frequent speaker at industry conferences and
+      Fortune 500<br />companies. I have Lectured at the Stanford Graduate School<br />of Business and Design School and
+      have sold two technology<br />companies since 2003.
+    </div>
+    <div
+      class="i-m-a-maker-designer-who-loves-stickynotes-sketching-and-startups-at-lu-xr-i-get-to-meet-incredible-entrepreneurs-and-help-them-design-great-customer-experiences-i-ve-worked-at-places-like-adaptive-path-and-the-crucible-you-can-find-me-on-twitter">
+      I&#039;m a maker+designer who loves stickynotes, sketching and<br />startups. At LUXr, I get to meet incredible
+      entrepreneurs and<br />help them design great customer experiences. I&#039;ve worked at<br />places like Adaptive
+      Path and The Crucible. You can find me<br />on Twitter.
+    </div>
+    <div
+      class="i-m-co-founder-and-design-lead-at-lean-startup-machine-and-creator-of-validation-board-i-m-also-lean-ux-coach-for-the-white-house-and-wharton-u-penn-i-fight-for-the-users-push-pixels-tweet-and-write-code">
+      I&#039;m co-founder and design lead at Lean Startup Machine and<br />creator of Validation Board. I&#039;m also
+      Lean UX coach for The<br />White House and Wharton UPenn. I fight for the users, push<br />pixels, tweet and write
+      code.
+    </div>
+    <div class="claire-willson">Claire Willson</div>
+    <div class="albert-markus">Albert Markus</div>
+    <div class="alan-jameson">Alan Jameson</div>
+    <div class="view-the-complete-list">View the complete list</div>
+    <div class="meet-your-instructors">Meet your instructors</div>
+    <img class="ellipse-1 zoom" src="ellipse-1.png" /><img class="ellipse-2 zoom" src="ellipse-2.png" /><img
+      class="ellipse-3 zoom" src="ellipse-3.png" /><img class="ellipse-4 zoom" src="ellipse-4.png" /><img
+      class="ellipse-5 zoom" src="ellipse-5.png" /><img class="ellipse-6 zoom" src="ellipse-6.png" />
+    <div class="anna-kin">Anna Kin</div>
+    <div class="jack-muller">Jack Muller</div>
+    <div class="jill-valentine">Jill Valentine</div>
+    <div
+      class="i-m-the-founder-of-bjango-an-indie-mac-and-i-os-developer-i-m-also-a-designer-i-co-host-a-podcast-called-iterate-with-rene-ritchie-and-seth-clifford-sometimes-i-write-articles-about-design-for-bjango-s-website-i-occasionally-write-for-smashing-magazine-and-speak-at-conferences">
+      I’m the founder of Bjango, an indie Mac and iOS developer.<br />I’m also a designer. I co-host a podcast called
+      Iterate with<br />Rene Ritchie and Seth Clifford. Sometimes I write articles<br />about design for Bjango’s
+      website. I occasionally write for<br />Smashing Magazine and speak at conferences.
+    </div>
+    <div class="rectangle-1"></div>
+
+    <!-- This part is used for submitting the second email -->
+    <form id="form2">
+      <input type="email" class="insert-box2" id="email2" name="email2" placeholder="Enter your email">
+      <button type="submit" class="submit-box2">Get started</button>
+    </form>
+
+    <!-- JavaScript code for the second form -->
+    <script>
+      // Get the form element by its id
+      const form2 = document.getElementById("form2");
+
+      // Create a function to handle the submit event on the second form element
+      function submitForm2(event) {
+        // Prevent the default behavior of submitting the form, which would reload the page
+        event.preventDefault();
+
+        // Get the email input element by its id
+        const emailInput2 = document.getElementById("email2");
+
+        // Get the value of the email input element, which is what the user typed in
+        const emailValue2 = emailInput2.value;
+
+        // Check if the email value is not empty and is a valid email address using a regular expression
+        if (emailValue2 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue2)) {
+          // If so, create a new pop up element with a success message using your email value
+          const newPopUp2 = createPopUp(`You have successfully subscribed!`);
+
+          // Append the new pop up element to the document body
+          document.body.appendChild(newPopUp2);
+
+          // Add an event listener to handle click events on both window object and newPopUp2's close button
+          window.addEventListener("click", closePopUp);
+          newPopUp2.querySelector(".pop-up-close").addEventListener("click", closePopUp);
+
+        } else {
+          // If not, create a new pop up element with an error message
+          const newPopUp2 = createPopUp(`Please enter a valid email address.`);
+
+          // Append it to the document body and add event listeners as before
+          document.body.appendChild(newPopUp2);
+          window.addEventListener("click", closePopUp);
+          newPopUp2.querySelector(".pop-up-close").addEventListener("click", closePopUp);
+        }
+      }
+
+      // Add an event listener to handle submit events on the second form element
+      form2.addEventListener("submit", submitForm2);
+    </script>
+
+    <div class="join-400-000-others-in-learning-design">
+      Join 400,000+ others in learning design
+    </div>
+    <div class="receive-a-design-lesson-each-week-crafted-by-a-design-pro">
+      Receive a design lesson each week, crafted by a design pro.
+    </div>
+    <div class="line-1"></div>
+    <div class="_2023">© 2023</div>
+    <div class="about"></div>
+    <div class="about2">About</div>
+    <div class="contact"></div>
+    <div class="contact2">Contact</div>
+    <div class="curators"></div>
+    <div class="curators2">Curators</div>
+    <div class="legal"></div>
+    <div class="legal2">Legal</div>
+  </div>
+</body>
+
+</html>

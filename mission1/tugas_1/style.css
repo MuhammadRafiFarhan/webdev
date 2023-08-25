@@ -1,0 +1,188 @@
+.tugas-1,
+.tugas-1 * {
+  box-sizing: border-box;
+}
+.tugas-1 {
+  background: #ffffff;
+  padding: 10px;
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+.biru-tua {
+  background: #1428e1;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  left: 600px;
+  top: 340px;
+}
+.coklat {
+  background: #655828;
+  width: 240px;
+  height: 160px;
+  position: absolute;
+  left: 840px;
+  top: 420px;
+}
+.putih {
+  background: #ffffff;
+  width: 120px;
+  height: 160px;
+  position: absolute;
+  left: 1080px;
+  top: 420px;
+}
+.pink {
+  background: #f49df5;
+  width: 120px;
+  height: 53.33px;
+  position: absolute;
+  left: 1200px;
+  top: 420px;
+}
+.biru {
+  background: #57cee8;
+  width: 120px;
+  height: 107px;
+  position: absolute;
+  left: 1200px;
+  top: 473px;
+}
+.ungu {
+  background: #3e489f;
+  width: 240px;
+  height: 160px;
+  position: absolute;
+  left: 840px;
+  top: 580px;
+}
+.abu {
+  background: #b3b3b3;
+  width: 240px;
+  height: 160px;
+  position: absolute;
+  left: 1080px;
+  top: 580px;
+}
+.kuning {
+  background: #faff00;
+  width: 240px;
+  height: 53.33px;
+  position: absolute;
+  left: 600px;
+  top: 580px;
+}
+.merah {
+  background: #ff0000;
+  width: 240px;
+  height: 53.33px;
+  position: absolute;
+  left: 600px;
+  top: 633px;
+}
+.hijau {
+  background: #57d65c;
+  width: 240px;
+  height: 54px;
+  position: absolute;
+  left: 600px;
+  top: 686px;
+}
+.hitam {
+  background: #000000;
+  width: 480px;
+  height: 80px;
+  position: absolute;
+  left: 840px;
+  top: 340px;
+}
+.hitam2 {
+  color: #ffffff;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 1035px;
+  top: 360px;
+}
+.coklat2 {
+  color: #ffffff;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 910px;
+  top: 480px;
+}
+.ungu2 {
+  color: #ffffff;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 920px;
+  top: 640px;
+}
+.merah2 {
+  color: #ffffff;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 672px;
+  top: 640px;
+}
+.biru-tua2 {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 658px;
+  top: 440px;
+}
+.putih2 {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 1100px;
+  top: 480px;
+}
+.pink2 {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 1228px;
+  top: 427px;
+}
+.biru2 {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 1230px;
+  top: 507px;
+}
+.abu2 {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 1170px;
+  top: 640px;
+}
+.kuning2 {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 668px;
+  top: 587px;
+}
+.hijau2 {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Inter", sans-serif;
+  position: absolute;
+  left: 682px;
+  top: 694px;
+}

@@ -1,0 +1,739 @@
+.main-frame,
+.main-frame * {
+  box-sizing: border-box;
+}
+
+.main-frame {
+  background: #dddcda;
+  width: 1920px;
+  height: 2248px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-kit {
+  background: #dddcda;
+  width: 62px;
+  height: 33px;
+  position: absolute;
+  left: 1467px;
+  top: 87px;
+}
+
+.view-all-lesson {
+  background: #dddcda;
+  width: 119px;
+  height: 33px;
+  position: absolute;
+  left: 1322px;
+  top: 87px;
+}
+
+.view-all-lesson2 {
+  color: #8f8f8f;
+  text-align: left;
+  font: 500 15px "Inter", sans-serif;
+  position: absolute;
+  left: 1325px;
+  top: 95px;
+}
+
+.view-all-lesson2:hover {
+  color: #000000;
+}
+
+.toolkit {
+  color: #8f8f8f;
+  text-align: left;
+  font: 500 15px "Inter", sans-serif;
+  position: absolute;
+  left: 1472px;
+  top: 95px;
+  width: 57px;
+}
+
+.toolkit:hover {
+  color: #000000;
+}
+
+.an-easy-to-follow-design-course-for-people-who-do-amazing-things {
+  text-align: center;
+  font: 400 48px "Baskervville", sans-serif;
+  position: absolute;
+  left: 592px;
+  top: 234px;
+  width: 734px;
+  height: 118px;
+}
+
+.an-easy-to-follow-design-course-for-people-who-do-amazing-things-span {
+  color: #000000;
+  font: 400 48px "Baskervville", sans-serif;
+}
+
+.an-easy-to-follow-design-course-for-people-who-do-amazing-things-span2 {
+  color: #ff0000;
+  font: 400 48px "Baskervville", sans-serif;
+}
+
+.an-easy-to-follow-design-course-for-people-who-do-amazing-things-span3 {
+  color: #000000;
+  font: 400 48px "Baskervville", sans-serif;
+}
+
+.receive-a-design-lesson-in-your-inbox-each-week-hand-crafted-by-a-design-pro-learn-at-your-own-pace-and-apply-it-to-your-real-life-work {
+  color: #8f8f8f;
+  text-align: center;
+  font: 400 20px "Inter", sans-serif;
+  position: absolute;
+  left: 584px;
+  top: 419px;
+}
+
+.insert-box {
+  background: #ffffff;
+  width: 493px;
+  height: 60px;
+  position: absolute;
+  left: 652px;
+  top: 514px;
+  padding-left: 1.5em
+}
+
+.submit-box {
+  background: #57d65c;
+  width: 121px;
+  height: 60px;
+  position: absolute;
+  left: 1145px;
+  top: 514px;
+}
+
+.submit-box:active {
+  filter: brightness(0.8);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: 0.7em;
+}
+
+.get-started {
+  color: #ffffff;
+  text-align: center;
+  font: 700 16px "Arimo Hebrew Subset", sans-serif;
+  position: absolute;
+  left: 1160px;
+  top: 535px;
+}
+
+.pencil-ruler-svgrepo-com {
+  width: 88px;
+  height: 87px;
+  position: absolute;
+  left: 1284px;
+  top: 654px;
+  overflow: hidden;
+}
+
+.group {
+  position: absolute;
+  inset: 0;
+}
+
+.group2 {
+  width: 22.24px;
+  height: 21.75px;
+  position: static;
+}
+
+.group3 {
+  position: absolute;
+  left: 18.33px;
+  top: 68.88px;
+  overflow: visible;
+}
+
+.group4 {
+  position: absolute;
+  left: 14.61px;
+  top: 65.25px;
+  overflow: visible;
+}
+
+.group5 {
+  width: 22px;
+  height: 72.5px;
+  position: static;
+}
+
+.group6 {
+  position: absolute;
+  left: 14.67px;
+  top: 0px;
+  overflow: visible;
+}
+
+.group7 {
+  width: 29.33px;
+  height: 87px;
+  position: static;
+}
+
+.group8 {
+  position: absolute;
+  left: 44px;
+  top: 0px;
+  overflow: visible;
+}
+
+.group9 {
+  width: 14.67px;
+  height: 7.25px;
+  position: static;
+}
+
+.group10 {
+  position: absolute;
+  left: 58.67px;
+  top: 18.12px;
+  overflow: visible;
+}
+
+.group11 {
+  position: absolute;
+  left: 58.67px;
+  top: 32.62px;
+  overflow: visible;
+}
+
+.group12 {
+  position: absolute;
+  left: 58.67px;
+  top: 47.12px;
+  overflow: visible;
+}
+
+.group13 {
+  position: absolute;
+  left: 58.67px;
+  top: 61.62px;
+  overflow: visible;
+}
+
+.controller-svgrepo-com {
+  position: absolute;
+  left: 909px;
+  top: 659px;
+  overflow: visible;
+}
+
+.microscope-svgrepo-com {
+  width: 85px;
+  height: 86px;
+  position: absolute;
+  left: 547px;
+  top: 655px;
+  overflow: hidden;
+}
+
+.group14 {
+  position: absolute;
+  left: 6.16px;
+  top: 72.48px;
+  overflow: visible;
+}
+
+.group15 {
+  position: absolute;
+  left: 48.44px;
+  top: 15.55px;
+  overflow: visible;
+}
+
+.group16 {
+  position: absolute;
+  left: 48.07px;
+  top: 0px;
+  overflow: visible;
+}
+
+.group17 {
+  position: absolute;
+  left: 15.59px;
+  top: 25.07px;
+  overflow: visible;
+}
+
+.group18 {
+  position: absolute;
+  left: 45.4px;
+  top: 25.55px;
+  overflow: visible;
+}
+
+.curated-resources {
+  color: #000000;
+  text-align: center;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: 501px;
+  top: 764px;
+}
+
+.interactive-content {
+  color: #000000;
+  text-align: center;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: 866px;
+  top: 764px;
+}
+
+.awesome-design-tools {
+  color: #000000;
+  text-align: center;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: 1216px;
+  top: 764px;
+}
+
+.don-t-know-where-to-start-we-ve-enlisted-the-world-s-top-designers-to-craft-lessons-for-learning-the-tools-techniques-terminology-of-good-design {
+  color: #8f8f8f;
+  text-align: center;
+  font: 500 15px "Inter", sans-serif;
+  position: absolute;
+  left: 426px;
+  top: 811px;
+}
+
+.learn-by-doing-play-with-design-puzzles-and-challenging-games-as-you-learn-test-your-skills-and-explore-possibilities {
+  color: #8f8f8f;
+  text-align: center;
+  font: 500 15px "Inter", sans-serif;
+  position: absolute;
+  left: 798px;
+  top: 811px;
+}
+
+.we-ve-curated-a-list-of-the-best-design-tools-to-help-you-figure-out-which-ones-to-learn-and-discover-new-and-helpful-tools-you-may-have-never-heard-of {
+  color: #8f8f8f;
+  text-align: center;
+  font: 500 15px "Inter", sans-serif;
+  position: absolute;
+  left: 1162px;
+  top: 811px;
+}
+
+.page-extension {
+  background: #ffffff;
+  width: 1920px;
+  height: 1324px;
+  position: absolute;
+  left: 0px;
+  top: 924px;
+}
+
+.i-m-a-designer-with-a-love-for-creating-products-that-are-meaningful-simple-and-easy-to-use-i-co-founded-and-am-currently-building-liberio-a-web-app-for-simple-e-book-creation-and-publishing-in-my-spare-time-i-write-and-speak-i-ove-talking-shop-on-twitter-so-let-s-chat {
+  color: #8f8f8f;
+  text-align: left;
+  font: 400 13px "Inter", sans-serif;
+  position: absolute;
+  left: 599px;
+  top: 1719px;
+}
+
+.i-m-a-designer-of-digital-products-in-my-late-20-s-who-is-little-too-into-simplicity-and-pixel-perfection-i-studied-interactive-visual-imaging-and-photography-in-missouri-and-somehow-ended-up-in-foggy-san-francisco-designing-things-with-unbelievably-talented-teams-such-as-fitbit-pinterest-zendesk-and-one-kings-lane {
+  color: #8f8f8f;
+  text-align: left;
+  font: 400 13px "Inter", sans-serif;
+  position: absolute;
+  left: 1193px;
+  top: 1474px;
+}
+
+.i-write-for-tech-crunch-forbes-psychology-today-and-am-a-frequent-speaker-at-industry-conferences-and-fortune-500-companies-i-have-lectured-at-the-stanford-graduate-school-of-business-and-design-school-and-have-sold-two-technology-companies-since-2003 {
+  color: #8f8f8f;
+  text-align: left;
+  font: 400 13px "Inter", sans-serif;
+  position: absolute;
+  left: 599px;
+  top: 1474px;
+}
+
+.i-m-a-maker-designer-who-loves-stickynotes-sketching-and-startups-at-lu-xr-i-get-to-meet-incredible-entrepreneurs-and-help-them-design-great-customer-experiences-i-ve-worked-at-places-like-adaptive-path-and-the-crucible-you-can-find-me-on-twitter {
+  color: #8f8f8f;
+  text-align: left;
+  font: 400 13px "Inter", sans-serif;
+  position: absolute;
+  left: 1193px;
+  top: 1229px;
+}
+
+.i-m-co-founder-and-design-lead-at-lean-startup-machine-and-creator-of-validation-board-i-m-also-lean-ux-coach-for-the-white-house-and-wharton-u-penn-i-fight-for-the-users-push-pixels-tweet-and-write-code {
+  color: #8f8f8f;
+  text-align: left;
+  font: 400 13px "Inter", sans-serif;
+  position: absolute;
+  left: 599px;
+  top: 1229px;
+}
+
+.claire-willson {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: 1193px;
+  top: 1190px;
+}
+
+.albert-markus {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: 1193px;
+  top: 1435px;
+}
+
+.alan-jameson {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: 1193px;
+  top: 1680px;
+}
+
+.view-the-complete-list {
+  color: #ff0000;
+  text-align: center;
+  font: 400 15px "Inter", sans-serif;
+  position: absolute;
+  left: 874px;
+  top: 1084px;
+}
+
+.meet-your-instructors {
+  color: #000000;
+  text-align: center;
+  font: 400 42px "Adamina", sans-serif;
+  position: absolute;
+  left: 743px;
+  top: 1012px;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
+
+.ellipse-1 {
+  border-radius: 50%;
+  width: 134px;
+  height: 134px;
+  position: absolute;
+  left: 413px;
+  top: 1180px;
+}
+
+.ellipse-2 {
+  border-radius: 50%;
+  width: 134px;
+  height: 134px;
+  position: absolute;
+  left: 413px;
+  top: 1419px;
+}
+
+.ellipse-3 {
+  border-radius: 50%;
+  width: 134px;
+  height: 134px;
+  position: absolute;
+  left: 413px;
+  top: 1658px;
+}
+
+.ellipse-4 {
+  border-radius: 50%;
+  width: 134px;
+  height: 134px;
+  position: absolute;
+  left: 1007px;
+  top: 1180px;
+}
+
+.ellipse-5 {
+  border-radius: 50%;
+  width: 134px;
+  height: 134px;
+  position: absolute;
+  left: 1007px;
+  top: 1419px;
+}
+
+.ellipse-6 {
+  border-radius: 50%;
+  width: 134px;
+  height: 134px;
+  position: absolute;
+  left: 1007px;
+  top: 1658px;
+}
+
+.anna-kin {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: 599px;
+  top: 1190px;
+}
+
+.jack-muller {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: 599px;
+  top: 1435px;
+}
+
+.jill-valentine {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Inter", sans-serif;
+  position: absolute;
+  left: 599px;
+  top: 1680px;
+}
+
+.i-m-the-founder-of-bjango-an-indie-mac-and-i-os-developer-i-m-also-a-designer-i-co-host-a-podcast-called-iterate-with-rene-ritchie-and-seth-clifford-sometimes-i-write-articles-about-design-for-bjango-s-website-i-occasionally-write-for-smashing-magazine-and-speak-at-conferences {
+  color: #8f8f8f;
+  text-align: left;
+  font: 400 13px "Inter", sans-serif;
+  position: absolute;
+  left: 1193px;
+  top: 1719px;
+}
+
+.rectangle-1 {
+  background: #d9d9d9;
+  width: 673px;
+  height: 213px;
+  position: absolute;
+  left: 623px;
+  top: 1903px;
+}
+
+.insert-box2 {
+  background: #ffffff;
+  width: 493px;
+  height: 60px;
+  position: absolute;
+  left: 652px;
+  top: 2020px;
+  padding-left: 1.5em
+}
+
+.submit-box2 {
+  background: #57d65c;
+  width: 121px;
+  height: 60px;
+  position: absolute;
+  left: 1145px;
+  top: 2020px;
+}
+
+.get-started2 {
+  color: #ffffff;
+  text-align: center;
+  font: 700 16px "Arimo Hebrew Subset", sans-serif;
+  position: absolute;
+  left: 1160px;
+  top: 2041px;
+}
+
+.email-address2 {
+  color: #8f8f8f;
+  text-align: center;
+  font: 400 18px "Arimo Hebrew Subset", sans-serif;
+  position: absolute;
+  left: 670px;
+  top: 2040px;
+}
+
+.join-400-000-others-in-learning-design {
+  color: #000000;
+  text-align: center;
+  font: 700 24px "Arimo Hebrew Subset", sans-serif;
+  position: absolute;
+  left: 652px;
+  top: 1930px;
+}
+
+.receive-a-design-lesson-each-week-crafted-by-a-design-pro {
+  color: #000000;
+  text-align: center;
+  font: 400 18px "Arimo Hebrew Subset", sans-serif;
+  position: absolute;
+  left: 652px;
+  top: 1978px;
+}
+
+.line-1 {
+  border-style: solid;
+  border-color: #8f8f8f;
+  border-width: 1px 0 0 0;
+  width: 1276px;
+  height: 0px;
+  position: absolute;
+  left: 322px;
+  top: 2170px;
+}
+
+._2023 {
+  color: #8f8f8f;
+  text-align: center;
+  font: 400 15px "Inter", sans-serif;
+  position: absolute;
+  left: 385px;
+  top: 2202px;
+}
+
+.about {
+  background: #ffffff;
+  width: 87px;
+  height: 30px;
+  position: absolute;
+  left: 1179px;
+  top: 2196px;
+}
+
+.about2 {
+  color: #8f8f8f;
+  text-align: center;
+  font: 400 15px "Inter", sans-serif;
+  position: absolute;
+  left: 1201px;
+  top: 2202px;
+}
+
+.contact {
+  background: #ffffff;
+  width: 87px;
+  height: 30px;
+  position: absolute;
+  left: 1276px;
+  top: 2196px;
+}
+
+.contact2 {
+  color: #8f8f8f;
+  text-align: center;
+  font: 400 15px "Inter", sans-serif;
+  position: absolute;
+  left: 1291px;
+  top: 2202px;
+}
+
+.curators {
+  background: #ffffff;
+  width: 87px;
+  height: 30px;
+  position: absolute;
+  left: 1373px;
+  top: 2196px;
+}
+
+.curators2 {
+  color: #8f8f8f;
+  text-align: center;
+  font: 400 15px "Inter", sans-serif;
+  position: absolute;
+  left: 1386px;
+  top: 2202px;
+}
+
+.legal {
+  background: #ffffff;
+  width: 87px;
+  height: 30px;
+  position: absolute;
+  left: 1471px;
+  top: 2196px;
+}
+
+.legal2 {
+  color: #8f8f8f;
+  text-align: center;
+  font: 400 15px "Inter", sans-serif;
+  position: absolute;
+  left: 1495px;
+  top: 2202px;
+}
+
+.logo {
+  width: 196px;
+  height: 62px;
+  position: absolute;
+  left: 391px;
+  top: 72px;
+}
+
+/* This is the CSS code for the pop up notification */
+.pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.pop-up-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.pop-up-message {
+  font-size: 16px;
+  font-weight: bold;
+  color: green;
+}
+
+.pop-up-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.pop-up-close:before,
+.pop-up-close:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.pop-up-close:before {
+  transform: rotate(45deg);
+}
+
+.pop-up-close:after {
+  transform: rotate(-45deg);
+}

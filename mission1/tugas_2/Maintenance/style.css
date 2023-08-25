@@ -1,0 +1,29 @@
+.maintenance,
+.maintenance * {
+  box-sizing: border-box;
+}
+.maintenance {
+  background: #4a4948;
+  padding: 403px 421px 403px 421px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1920px;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.warning-2-fill {
+  flex-shrink: 0;
+  position: relative;
+  overflow: visible;
+}
+.maintenance-notice {
+  color: #b3b3b3;
+  text-align: center;
+  font: 400 20px "Inter", sans-serif;
+  position: relative;
+  width: 597px;
+}
