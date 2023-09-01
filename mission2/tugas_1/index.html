@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission2-Tugas1-Responsive Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">
+                <img src="./images/logo.png" alt="iCashier Logo" class="title-image">
+            </h1>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for items">
+                <button id="search-button">Search</button>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="products">
+            <!-- Product containers will be added dynamically -->
+        </div>
+        <div class="cart">
+            <h2>My Cart:</h2>
+            <ul id="cart-list"></ul>
+            <hr>
+            <div id="cart-total">
+                <span>Total Items:</span><span id="total-items">0</span><br>
+                <span>Total Price:</span><span id="total-price">Rp 0.00</span><br>
+                <span>Total Payment:</span><span id="total-payable">Rp 0.00</span><br>
+            </div>
+            <button id="print-receipt">Print Receipt</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
